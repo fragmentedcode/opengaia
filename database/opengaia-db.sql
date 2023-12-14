@@ -1,3 +1,5 @@
+# Use this to created the MySQL database
+
 create database open_gaia;
 
 use open_gaia;
