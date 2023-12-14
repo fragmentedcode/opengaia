@@ -4,6 +4,16 @@ create database open_gaia;
 
 use open_gaia;
 
+INSERT INTO `og_settings`(`setting_key`, `setting_value`)
+VALUES ('VERSION', '1.0.0');
+
+create table og_settings (
+	setting_id bigint auto_increment not null primary key,
+    setting_key varchar(70) unique not null,
+    setting_value varchar(70),
+    index idx_setting_key (setting_key)
+);
+
 create table taxon_order (
 	order_id bigint auto_increment not null primary key,
     order_name varchar(70) unique not null,
